@@ -11,14 +11,24 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <title>Hello, cuy!</title>
+    <title>Laravel Edo</title>
 </head>
 
 <body>
-  <img src="{{ asset('img/forest.jpg') }}" alt="forest" class="w-screen h-screen object-cover fixed z-0 inset-0">
-  <div class="d-w d-h d-bg-transparent relative z-10 m-8 rounded-lg p-4">
-    hello
-  </div>
+    <img src="{{ asset('img/wave.jpg') }}" alt="forest" class="w-screen h-screen object-cover fixed z-0 inset-0">
+    <div class="d-w d-h d-bg-transparent relative z-10 m-16 rounded-3xl overflow-hidden">
+        <div class="flex h-full">
+            <nav class="w-48 p-4 flex flex-col">
+                <div class="font-bold text-xl mb-4">Dani Edo</div>
+                <a href="#" class="mb-2 hover:font-extrabold hover:no-underline">Home</a>
+                <a href="#" class="mb-2 hover:font-extrabold hover:no-underline">My Profile</a>
+                <a href="#" class="mb-2 hover:font-extrabold hover:no-underline">Logout</a>
+            </nav>
+            <div class="d-bg-semi-transparent p-4 flex-grow">
+                content
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

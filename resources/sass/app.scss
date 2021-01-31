@@ -3,13 +3,17 @@
 @tailwind utilities;
 
 .d-w {
-    width: calc(100vw - 4rem);
+    width: calc(100vw - 8rem);
 }
 
 .d-h {
-    height: calc(100vh - 4rem);
+    height: calc(100vh - 8rem);
 }
 
 .d-bg-transparent {
-    background-color: #fffffff2;
+    background-color: #ffffffc4;
+}
+
+.d-bg-semi-transparent {
+    background-color: #fff3;
 }
