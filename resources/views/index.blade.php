@@ -11,7 +11,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <title>Laravel Edo</title>
+    <title>Laravel Edo | @yield('title')</title>
 </head>
 
 <body>
@@ -20,12 +20,12 @@
         <div class="flex h-full">
             <nav class="w-48 p-4 flex flex-col">
                 <div class="font-bold text-xl mb-4">Dani Edo</div>
-                <a href="#" class="mb-2 hover:font-extrabold hover:no-underline">Home</a>
-                <a href="#" class="mb-2 hover:font-extrabold hover:no-underline">My Profile</a>
-                <a href="#" class="mb-2 hover:font-extrabold hover:no-underline">Logout</a>
+                <a href="{{ url('/') }}" class="{{ Request::is('/') ? 'text-blue-600 font-bold ' : '' }}mb-2 hover:font-extrabold hover:no-underline">Home</a>
+                <a href="{{ url('/about') }}" class="{{ Request::is('about') ? 'text-blue-600 font-bold ' : '' }}mb-2 hover:font-extrabold hover:no-underline">About</a>
+                <a href="{{ url('/profile') }}" class="{{ Request::is('profile') ? 'text-blue-600 font-bold ' : '' }}mb-2 hover:font-extrabold hover:no-underline">Profile</a>
             </nav>
             <div class="d-bg-semi-transparent p-4 flex-grow">
-                content
+                @yield('content')
             </div>
         </div>
     </div>
