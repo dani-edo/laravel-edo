@@ -1,7 +1,7 @@
 @extends('index')
 
 @section('title', 'About')
-
+@section('subtitle', 'Ng nganu')
 @section('content')
-    About
+    Namaku {{$name}} kampret
 @endsection

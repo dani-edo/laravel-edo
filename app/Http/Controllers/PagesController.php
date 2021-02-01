@@ -13,6 +13,6 @@ class PagesController extends Controller
 
     public function about()
     {
-        return view('about.index');
+        return view('about.index', ['name' => 'Dani Edo']);
     }
 }
