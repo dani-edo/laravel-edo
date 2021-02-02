@@ -1,4 +1,4 @@
-@extends('index')
+@extends('layout')
 
 @section('title', 'About')
 @section('subtitle', 'Ng nganu')

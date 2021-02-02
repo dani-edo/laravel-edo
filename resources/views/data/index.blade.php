@@ -1,4 +1,4 @@
-@extends('index')
+@extends('layout')
 
 @section('title', 'Home')
 @section('subtitle', 'Hemat Pangkal Kaya')
