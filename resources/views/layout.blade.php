@@ -22,7 +22,7 @@
                 <div class="font-bold text-xl mb-4">Dani Edo</div>
                 <a href="{{ url('/') }}" class="{{ Request::is('/') ? 'text-blue-600 font-bold ' : '' }}mb-2 hover:font-extrabold hover:no-underline">Home</a>
                 <a href="{{ url('/about') }}" class="{{ Request::is('about') ? 'text-blue-600 font-bold ' : '' }}mb-2 hover:font-extrabold hover:no-underline">About</a>
-                <a href="{{ url('/data') }}" class="{{ Request::is('profile') ? 'text-blue-600 font-bold ' : '' }}mb-2 hover:font-extrabold hover:no-underline">Data</a>
+                <a href="{{ url('/data') }}" class="{{ Request::is('data') ? 'text-blue-600 font-bold ' : '' }}mb-2 hover:font-extrabold hover:no-underline">Data</a>
             </nav>
             <div class="d-bg-semi-transparent p-4 flex-grow overflow-scroll">
                 <h1 class="mb-4 text-5xl font-bold mt-3">@yield('subtitle')</h1>
