@@ -48,7 +48,7 @@ services:
     # env_file:
     #   - ./mysql/database.env
     environment:
-      MYSQL_DATABASE: db_memoria
+      MYSQL_DATABASE: laravel_edo
       MYSQL_USER: root
       MYSQL_PASSWORD: secret
       MYSQL_ROOT_PASSWORD: secret
