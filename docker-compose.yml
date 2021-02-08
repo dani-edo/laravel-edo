@@ -11,8 +11,6 @@ services:
     restart: unless-stopped
     working_dir: /var/www
     volumes:
-      - ./node_modules:/var/www/node_modules
-      - ./vendor:/var/www/vendor
       - ./:/var/www
       - ./php/php.ini:/usr/local/etc/php/conf.d/local.ini
     depends_on:
@@ -32,9 +30,9 @@ services:
       - php
       # - phpmyadmin
     volumes:
-      - ./node_modules:/var/www/node_modules
       - ./:/var/www
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/ssl:/etc/nginx/ssl
     networks:
       - Dani_edo
 
@@ -56,7 +54,6 @@ services:
       SERVICE_NAME: mysql
     volumes:
       - ./mysql/data:/var/lib/mysql
-      - ./:/var/www
     networks:
       - Dani_edo
 
