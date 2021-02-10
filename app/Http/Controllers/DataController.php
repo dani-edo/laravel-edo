@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Student;
 
 class DataController extends Controller
 {
@@ -14,7 +15,8 @@ class DataController extends Controller
      */
     public function index()
     {
-        $data = DB::table('students')->get();
+        // $data = DB::table('students')->get();
+        $data = Student::all();
         return view('data.index', ['data' => $data]);
     }
 
