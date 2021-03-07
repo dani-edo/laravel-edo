@@ -47,7 +47,7 @@ class DatasController extends Controller
      */
     public function show(Data $data)
     {
-        //
+        return view('datas.show', compact('data'));
     }
 
     /**

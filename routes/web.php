@@ -21,3 +21,4 @@ Route::get('/about', [PagesController::class, 'about']);
 
 Route::get('/data', [DataController::class, 'index']);
 Route::get('/datas', [DatasController::class, 'index']);
+Route::get('/datas/{data}', [DatasController::class, 'show']);
