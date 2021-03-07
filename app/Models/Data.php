@@ -10,4 +10,10 @@ class Data extends Model
 {
     use HasFactory, UuidModel;
     protected $table = 'students';
+    protected $fillable = [
+        'title',
+        'author',
+        'email',
+        'views'
+    ];
 }

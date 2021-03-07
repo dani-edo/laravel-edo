@@ -37,12 +37,23 @@ class DatasController extends Controller
      */
     public function store(Request $request)
     {
-        $data = new Data;
-        $data->title = $request->title;
-        $data->author = $request->author;
-        $data->email = $request->email;
-        $data->views = $request->views;
-        $data->save();
+        // $data = new Data;
+        // $data->title = $request->title;
+        // $data->author = $request->author;
+        // $data->email = $request->email;
+        // $data->views = $request->views;
+        // $data->save();
+
+        // use model create (satu satu)
+        // Data::create([
+        //     'title' => $request->title,
+        //     'author' => $request->author,
+        //     'email' => $request->email,
+        //     'views' => $request->views,
+        // ]);
+
+        // use model create (langsung seluruhnya, yg ada di dalam fillable)
+        Data::create($request->all());
 
         return redirect('/datas');
     }
