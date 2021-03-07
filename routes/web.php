@@ -20,5 +20,9 @@ Route::get('/', [PagesController::class, 'home']);
 Route::get('/about', [PagesController::class, 'about']);
 
 Route::get('/data', [DataController::class, 'index']);
+
+// Datas
 Route::get('/datas', [DatasController::class, 'index']);
+Route::get('/datas/create', [DatasController::class, 'create']);
 Route::get('/datas/{data}', [DatasController::class, 'show']);
+Route::post('/datas', [DatasController::class, 'store']);

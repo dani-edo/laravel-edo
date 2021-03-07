@@ -25,7 +25,8 @@ class DatasController extends Controller
      */
     public function create()
     {
-        //
+        $datas = Data::all();
+        return view('datas.create', ['data' => $datas]);
     }
 
     /**
@@ -36,7 +37,14 @@ class DatasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Data;
+        $data->title = $request->title;
+        $data->author = $request->author;
+        $data->email = $request->email;
+        $data->views = $request->views;
+        $data->save();
+
+        return redirect('/datas');
     }
 
     /**
