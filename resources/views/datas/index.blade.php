@@ -7,6 +7,11 @@
         <h2 class="mb-3">Tabel Datas</h2>
         <a href="{{ url('/datas/create') }}" class="ml-auto mb-1 bg-primary text-white px-2 py-1 rounded">Create Data</a>
     </div>
+    @if (session('berhasilmasuk'))
+        <div class="alert alert-success">
+            {{ session('berhasilmasuk') }}
+        </div>
+    @endif
     <table class="table-fixed bg-white p-3 block rounded-3xl">
         <thead>
             <tr>

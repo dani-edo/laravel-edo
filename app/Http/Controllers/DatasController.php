@@ -55,7 +55,7 @@ class DatasController extends Controller
         // use model create (langsung seluruhnya, yg ada di dalam fillable)
         Data::create($request->all());
 
-        return redirect('/datas');
+        return redirect('/datas')->with('berhasilmasuk', 'Data berhasil ditambahkan cuy!');
     }
 
     /**
